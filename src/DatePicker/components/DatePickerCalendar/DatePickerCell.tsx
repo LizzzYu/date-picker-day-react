@@ -37,13 +37,18 @@ const Wrapper = styled.div<{
 		if (!isCurrentMonth) return COLOR_DISABLE;
 	}};
 
-	/* &:hover {
-		background-color: ${({ isCurrentMonth, isStartDate, isEndDate, isInRange }) => {
-		if (!isCurrentMonth) return 'unset';
-		if (isStartDate || isEndDate || isInRange) return COLOR_ACTIVE;
-		return COLOR_HOVER;
-	}};
-	} */
+	&:hover {
+		background-color: ${({
+			isCurrentMonth,
+			isStartDate,
+			isEndDate,
+			isInRange,
+		}) => {
+			if (!isCurrentMonth) return 'unset';
+			if (isStartDate || isEndDate || isInRange) return COLOR_ACTIVE;
+			return COLOR_HOVER;
+		}};
+	}
 `;
 
 interface DatePickerCellProps {
